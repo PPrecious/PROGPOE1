@@ -81,6 +81,64 @@ submitClaim:
         </Grid>
 </Window>
 
+trackStatus:
+<Window x:Class="ProgPOE.TrackStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgPOE"
+        mc:Ignorable="d"
+        Title="TrackStatus" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Track Your Claim Status" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <DataGrid AutoGenerateColumns="False" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Submission Date" Binding="{Binding SubmissionDate}"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                    <DataGridTextColumn Header="Last Updated" Binding="{Binding LastUpdated}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
+
+approveClaims:
+<Window x:Class="ProgPOE.ApproveClaims"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgPOE"
+        mc:Ignorable="d"
+        Title="ApproveClaims" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Approve Claims" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <DataGrid AutoGenerateColumns="False" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Lecturer Name" Binding="{Binding LecturerName}"/>
+                    <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}"/>
+                    <DataGridTextColumn Header="Amount Due" Binding="{Binding AmountDue}"/>
+                    <DataGridTextColumn Header="Submission Date" Binding="{Binding SubmissionDate}"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                    <DataGridTemplateColumn Header="Actions">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Approve" Margin="2"/>
+                                    <Button Content="Reject" Margin="2"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
+
 
     </Grid>
 </Window>
