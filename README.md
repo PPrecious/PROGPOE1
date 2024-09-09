@@ -138,7 +138,3 @@ approveClaims:
         </StackPanel>
     </Grid>
 </Window>
-
-
-    </Grid>
-</Window>
