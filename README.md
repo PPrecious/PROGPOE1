@@ -27,3 +27,26 @@ mainWindow:
         </DockPanel>
     </Grid>
 </Window>
+
+uploadDocuments:
+<Window x:Class="ProgPOE.UploadDocuments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgPOE"
+        mc:Ignorable="d"
+        Title="UploadDocuments" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Upload Supporting Documents" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Choose Files:" Width="120"/>
+                <Button Content="Browse..." Width="120" Click="BrowseFiles_Click"/>
+            </StackPanel>
+            <ListBox Name="FilesList" Height="150" Margin="0,10,0,0"/>
+            <Button Content="Upload" Width="120" HorizontalAlignment="Center" Click="UploadFiles_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
