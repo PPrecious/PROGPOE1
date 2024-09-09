@@ -48,5 +48,39 @@ uploadDocuments:
             <Button Content="Upload" Width="120" HorizontalAlignment="Center" Click="UploadFiles_Click"/>
         </StackPanel>
 
+submitClaim:
+<Window x:Class="ProgPOE.SubmitClaim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgPOE"
+        mc:Ignorable="d"
+        Title="SubmitClaim" Height="450" Width="800">
+    <Grid Margin="10">
+            <StackPanel>
+                <TextBlock Text="Submit Your Monthly Claim" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Hours Worked:" Width="120"/>
+                    <TextBox Name="HoursWorked" Width="200"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Hourly Rate:" Width="120"/>
+                    <TextBox Name="HourlyRate" Width="200" IsEnabled="False" Text="Auto-filled"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Amount Due:" Width="120"/>
+                    <TextBox Name="AmountDue" Width="200" IsEnabled="False" Text="Auto-calculated"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Submission Date:" Width="120"/>
+                    <TextBox Name="SubmissionDate" Width="200" IsEnabled="False" Text="Today's Date"/>
+                </StackPanel>
+                <Button Content="Submit Claim" Width="120" HorizontalAlignment="Center" Click="SubmitClaimButton_Click"/>
+            </StackPanel>
+        </Grid>
+</Window>
+
+
     </Grid>
 </Window>
